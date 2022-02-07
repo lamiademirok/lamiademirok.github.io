@@ -1,1 +1,0 @@
-# lamiademirok.github.io
