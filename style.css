@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+
+
+/* GENERAL SETINGS */
+html,
+body,
+header,
+#intro,
+#contact{
+    height: 100%;
+    font-family: 'Nanum Gothic Coding', sans-serif;
+    scroll-behavior: smooth;
+    cursor: default;
+    letter-spacing: 1px;
+    text-align:center;
+
+}
+#collages,#projects{
+    font-family: 'Nanum Gothic Coding', monospace;
+    scroll-behavior: smooth;
+    cursor: default;
+    min-height:1100px;
+    background-color:rgba(255, 255, 255, 0.075);;
+}
+
+/* REVEAL EFFECT */
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease-in;
+  }
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+
+/* SCROLLBAR */
+  html {
+  scrollbar-face-color: #646464;
+  scrollbar-base-color: #646464;
+  scrollbar-3dlight-color: #646464;
+  scrollbar-highlight-color: #646464;
+  scrollbar-track-color: #000;
+  scrollbar-arrow-color: #000;
+  scrollbar-shadow-color: #646464;
+  scrollbar-dark-shadow-color: #646464;
+}
+
+::-webkit-scrollbar { width: 8px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background-color: #646464;}
+::-webkit-scrollbar-track-piece { background-color: #000;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #646464;}
+::-webkit-resizer { background-color: #666;}
+  
+/* UP BUTTON */
+#myBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    color:grey;
+    background: rgba(128, 128, 128, 0.096);
+    border: none;
+    
+  }
+  
+/* ABOUT SECTION */  
+#about{
+    height:100%;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+#mypic{
+    width:370px;
+    display:none;
+    -webkit-filter: brightness(70%);    
+}
+
+#mypic:hover{
+    -webkit-filter: brightness(80%);    
+
+}
+
+.techItem{
+    padding:6px;
+    border-radius: 50px;
+    display: inline;
+    background-color:rgba(202, 202, 202, 0.61);
+}
+
+.techItem:hover{
+    background-color: rgba(250, 176, 188, 0.212);
+    cursor:pointer;
+}
+
+
+/* NAVBAR AND MAIN PAGE */
+
+#navbar{
+    overflow: hidden;
+    background-color:transparent;
+
+}
+
+#intro {
+    background: url("materials/blv.png")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#contact{
+    padding-top: 200px;
+}
+
+.content{
+    overflow:hidden;
+}
+
+svg:hover{
+    color:#f0747f;
+}  
+
+
+
+/* SQUARES IN HEADERS */
+.squares{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    padding: 20px;
+}
+
+.box{
+
+    height:200px;
+    width:200px;            
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;  
+}
+.on-top{
+      margin: 20px; 
+      z-index: 9;
+      height:200px;width:200px
+ 
+}
+.words{
+
+    padding-top:30px;
+    margin-left:50px;
+    position:relative;
+    font-size:30px;
+}
+
+/* PROJECT AND COLLAGE SECTIONS */
+
+.collages{
+    height:250px;
+    object-fit:contain;
+    opacity:0.9;
+    border-radius:5px;
+}
+.collages:hover{
+    opacity:1;
+}
+
+.projects{
+    -webkit-filter: brightness(70%);  
+    opacity:0.8;
+    border-radius: 20px;
+    height:200px;
+    object-fit: cover;
+}
+.projects:hover{
+    opacity:1;
+
+}
+
+/* FRAMES */
+.pink{
+    border-right:7px solid #f0747f;
+    border-top:3px solid #f0747f;
+    border-bottom:7px solid #f0747f;
+}
+
+.black{
+    border-right:7px solid black;
+    border-top:3px solid black;
+    border-bottom:7px solid black;
+}
+
+/* CIRCLES */
+.circle
+{
+    width:20px;height:20px;
+    border-radius:50%;
+    opacity:1;
+}
+
+.circDiv{
+    margin-left:80px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    #about,#collages{
+        height: inherit;
+    }
+    hr{
+        display:none;
+    }
+  }
+
+  @media only screen and (max-width: 600px){
+      #mypic{
+          width: 100px;
+      }
+      #collages,#projects{
+          height: 2600px;
+      }
+      
+  }
+
